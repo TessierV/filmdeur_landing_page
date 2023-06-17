@@ -45,7 +45,7 @@
 
         <main class="main">
             <section id="start">
-                <h1>Lorem ipsum dolor</h1>
+                <h1>FLIMDEUR</h1>
                 <button>Button</button>
             </section>
               <!--=============== SPONSOR ===============-->
@@ -59,7 +59,7 @@
             <section class="home section" id="home">
                 <div class="home__container container grid">
                     <div>
-                        <img src="assets/img/home.png" alt="" class="home__img">
+                        <img src="assets/img/Main.png" alt="" class="home__img">
                     </div>
 
                     <div class="home__data">
@@ -147,23 +147,7 @@
                   </div>
                 </div>
               </section>
-              <script>const caseImages = ['Phone1.png', 'Phone2.png', 'Phone3.png'];
-                const caseImgElement = document.querySelector('.case__img');
 
-                let currentIndex = 0;
-
-                function changeCaseImage() {
-                  caseImgElement.classList.add('hide');
-                  setTimeout(() => {
-                    currentIndex = (currentIndex + 1) % caseImages.length;
-                    caseImgElement.src = `assets/img/${caseImages[currentIndex]}`;
-                    caseImgElement.classList.remove('hide');
-                  }, 2000);
-                }
-
-                changeCaseImage();
-                setInterval(changeCaseImage, 6000);
-                </script>
 
 
             <!--=============== DISCOUNT ===============-->
@@ -218,15 +202,11 @@
             </p>
         </footer>
 
-        <!--=============== SCROLL UP ===============-->
         <a href="#" class="scrollup" id="scroll-up">
             <i class="ri-arrow-up-s-line scrollup__icon"></i>
         </a>
 
-        <!--=============== SCROLL REVEAL ===============-->
         <script src="https://unpkg.com/scrollreveal"></script>
-
-        <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
     </body>
 </html>
