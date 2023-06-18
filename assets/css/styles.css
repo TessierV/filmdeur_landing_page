@@ -2,13 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Squada+One&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap');
+
 /*** VARIABLES CSS ***/
 :root {
   --header-height: 3rem;
   /*** Colors ***/
   --hue-color: 206;
   --black-color: black;
-  --black-color-light:#272D36;
+  --black-color-light: #272D36;
   --black-color-hover: var(--black-color-light);
   --white-color: #FFF;
   --grey-color: #C1C1C1;
@@ -85,7 +86,8 @@ body {
   color: var(--text-color);
 }
 
-h1, h2 {
+h1,
+h2 {
 
   background: var(--text-gradient);
   color: transparent;
@@ -290,10 +292,10 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-	background: radial-gradient(circle, #e73c7e, var(--high-colors), #e73c7e);
+  background: radial-gradient(circle, #e73c7e, var(--high-colors), #e73c7e);
 
   background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
   height: 100vh;
   width: 300vw;
   z-index: -1;
@@ -301,14 +303,16 @@ img {
 
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
 
@@ -410,8 +414,13 @@ img {
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 
@@ -444,7 +453,8 @@ img {
   font-size: var(--smaller-font-size);
 }
 
-.specs__data:nth-child(1), .specs__data:nth-child(4) {
+.specs__data:nth-child(1),
+.specs__data:nth-child(4) {
   margin-left: 1.5rem;
 }
 
@@ -497,31 +507,72 @@ img {
 }
 
 
-/** DISCOUNT ***/
+/** testimonial ***/
 
-.discount{
+.testimonial {
   background: var(--scroll-thumb-color);
   margin: 0 3%;
   border-radius: 15px;
 }
-.discount__container {
+
+.testimonial__container {
   border-radius: .75rem;
   background-image: url("../img/2.png");
   background-repeat: no-repeat;
-  background-size: 450px;
+  background-size: 30%;
   background-attachment: fixed;
   background-blend-mode: screen;
-  background-position: right 30% bottom 45%;}
+  background-position: right 30% bottom 45%;
+}
 
-.discount__title {
+.testimonial__title {
   color: var(--body-color);
   font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-0-75);
 }
 
-.discount__description {
+.testimonial__description {
   margin-bottom: var(--mb-1);
 }
+
+
+.slider {
+  overflow: hidden;
+  height: 250px;
+  position: relative;
+}
+
+.testimonial-item {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.testimonial-item.active {
+  opacity: 1;
+}
+
+.testimonial-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.testimonial-text {
+  margin-top: 10px;
+  font-style: italic;
+  width: 300px;
+}
+
+.testimonial-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
 
 
 
@@ -556,7 +607,8 @@ img {
   align-self: flex-end;
 }
 
-.categories__title, .categories__price {
+.categories__title,
+.categories__price {
   font-size: var(--small-font-size);
 }
 
@@ -572,7 +624,7 @@ img {
   border-radius: .35rem;
 }
 
-/*Teams attention will need to do responsive*/
+/*** Teams attention will need to do responsive ***/
 
 .teams__container {
   position: relative;
@@ -602,7 +654,8 @@ img {
   font-size: var(--smaller-font-size);
 }
 
-.teams__data:nth-child(1), .teams__data:nth-child(4) {
+.teams__data:nth-child(1),
+.teams__data:nth-child(4) {
   margin-left: -3rem;
 }
 
@@ -611,8 +664,6 @@ img {
   position: relative;
   overflow: hidden;
 }
-
-
 
 
 /*** FOOTER ***/
@@ -679,40 +730,51 @@ img {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
+
   .section__title {
     font-size: var(--big-font-size);
   }
+
   .home__img {
     width: 200px;
   }
+
   .home__title {
     top: -4rem;
     font-size: var(--bigger-font-size);
   }
+
   .home__data {
     padding-top: 1rem;
   }
+
   .home__description {
     font-size: var(--small-font-size);
   }
+
   .specs__img {
     width: 200px;
   }
+
   .teams__img {
     width: 250px;
   }
+
   .case__container {
     grid-template-columns: .6fr 1fr;
   }
+
   .case__img {
     width: 420px;
     top: -2rem;
     left: -9rem;
     border: 3px solid salmon;
   }
+
   .case__data {
     padding: 0;
   }
+
   .categories__container {
     grid-template-columns: 142px;
     justify-content: center;
@@ -724,46 +786,57 @@ img {
   .home__container {
     grid-template-columns: .8fr 1fr;
   }
+
   .home__data {
     padding-top: 2rem;
   }
+
   .specs__img {
     position: initial;
   }
+
   .specs__container {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
   }
+
   .teams__img {
     position: initial;
   }
+
   .teams__container {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
   }
+
   .case__img {
     position: initial;
 
   }
+
   .case__data {
     padding: 0;
   }
+
   .case__container {
     grid-template-columns: max-content 250px;
     justify-content: center;
     align-items: center;
     column-gap: 2rem;
   }
-  .discount__img {
+
+  .testimonial__img {
     position: initial;
   }
-  .discount__container {
+
+  .testimonial__container {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
   }
+
   .categories__container {
     grid-template-columns: repeat(3, 142px);
     justify-content: center;
@@ -774,73 +847,94 @@ img {
   body {
     margin: 0;
   }
+
   .section {
     padding: 6rem 0 2rem;
   }
+
   .nav {
     height: calc(var(--header-height) + 1.5rem);
   }
+
   .nav__logo {
     width: 2rem;
   }
+
   .nav__list {
     flex-direction: row;
     column-gap: 3.5rem;
   }
+
   .nav__link {
     font-size: var(--normal-font-size);
     text-transform: initial;
   }
-  .nav__toggle, .nav__close {
+
+  .nav__toggle,
+  .nav__close {
     display: none;
   }
+
   .home__container {
     position: relative;
     grid-template-columns: repeat(2, 1fr);
   }
+
   .home__data {
     padding-top: 8rem;
   }
+
   .specs__img {
     width: 550px;
   }
+
   .teams__img {
     width: 400px;
   }
+
   .case__container {
     column-gap: 5rem;
   }
+
   .case__img {
     width: 450px;
   }
+
   .case__description {
     margin-bottom: var(--mb-2);
   }
-  .discount__container {
+
+  .testimonial__container {
     grid-template-columns: 250px max-content;
     justify-content: center;
     column-gap: 5rem;
     padding: 3rem 0;
   }
-  .discount__title {
+
+  .testimonial__title {
     font-size: var(--h2-font-size);
     margin-bottom: var(--mb-1);
   }
-  .discount__description {
+
+  .testimonial__description {
     margin-bottom: var(--mb-2);
   }
+
   .categories__container {
     grid-template-columns: repeat(3, 162px);
     gap: 6rem 3rem;
     padding-top: 5rem;
   }
+
   .categories__card {
     height: 152px;
     padding: .85rem;
   }
+
   .categories__img {
     width: 95px;
   }
+
   .footer__container {
     grid-template-columns: .4fr .7fr .7fr 1fr;
   }
@@ -852,25 +946,32 @@ img {
     margin-left: auto;
     margin-right: auto;
   }
+
   .home__img {
     width: 500px;
   }
+
   .home__title {
     top: -5rem;
     left: 3.5rem;
   }
+
   .home__description {
     padding-right: 5rem;
   }
+
   .sponsor__img {
     width: 100px;
   }
-  .discount__img {
+
+  .testimonial__img {
     width: 350px;
   }
+
   .footer__container {
     padding-top: 3rem;
   }
+
   .footer__copy {
     margin-top: 9rem;
   }
