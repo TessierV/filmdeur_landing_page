@@ -187,8 +187,6 @@ img {
   cursor: pointer;
 }
 
-
-
 .nav__list {
   display: flex;
   flex-direction: column;
@@ -512,7 +510,7 @@ img {
 }
 
 .testimonial__container {
-  background-image: url("../img/2.png");
+  background-image: url("../img/testimonial.png");
   background-repeat: no-repeat;
   background-size: 35%;
   background-attachment: fixed;
@@ -659,7 +657,8 @@ img {
   position: relative;
 }
 
-.teams__background, .teams__background_2 {
+.teams__background,
+.teams__background_2 {
   position: absolute;
   top: 50%;
   left: 50%;
