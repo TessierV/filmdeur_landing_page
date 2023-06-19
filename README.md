@@ -1,4 +1,5 @@
-<a href="https://filmdeur-landingpage.netlify.app/"><img width="100%" src="https://github.com/TessierV/filmdeur_landing_page/assets/113889290/0a509b44-e3ff-4517-8e7e-68a9d3d6e20b"></a>
+![Captur0](https://github.com/TessierV/filmdeur_landing_page/assets/113889290/e81f48a6-9762-4f64-b256-b606e137db65)
+
 <h2><a href="https://filmdeur-landingpage.netlify.app/"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=44&pause=1000&color=f64790&center=true&vCenter=true&width=735&height=45&lines=FILMDEUR+Landing+Page" alt="Typing SVG" /></a></h2><br>
 
 ## What is a Landing Page?
@@ -18,9 +19,7 @@ The Portfolio Project landing page is a webpage that presents information about 
 ## Spitch
 
 <p align="center">
-  <a align="center" href="https://filmdeur-landingpage.netlify.app/">
-    <img  style="width: 60%;" src="https://github.com/TessierV/filmdeur_landing_page/assets/113889290/14c1aef8-0bf7-4497-a19d-616aa628ee00" alt="">
-  </a>
+    <img  style="width: 60%;" src="https://github.com/TessierV/filmdeur_landing_page/assets/113889290/c45064c2-6568-408f-9f3f-898922953eb3" alt="">
 </p>
 
 Filmdeur is a unique movie exploration platform designed to ignite your cinematic curiosity. Say goodbye to indecisiveness and hello to thrilling movie adventures! Powered by the IMDB API, Filmdeur offers a delightful randomization feature that takes you on an unexpected journey through the vast world of films.
