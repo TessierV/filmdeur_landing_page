@@ -63,34 +63,38 @@ const sr = ScrollReveal({
     delay: 400,
 })
 
-sr.reveal(`.home__header, .section__title`, { delay: 600 })
-sr.reveal(`.home__footer`, { delay: 700 })
+sr.reveal(`.home__title, .section__title`, { delay: 600 })
+sr.reveal(`.home__footer, .testimonial__img, .teams__subtitle`, { delay: 700, origin: 'left' })
 sr.reveal(`.home__img`, { delay: 900, origin: 'top' })
-sr.reveal(`.categories__card,.footer__copy`, { origin: 'top', interval: 100 })
-sr.reveal(`.specs__data, .teams__data, .testimonial__animate`, { origin: 'left', interval: 100 })
-sr.reveal(`.specs__img, .teams__img, .testimonial__img`, { origin: 'right' })
-sr.reveal(`.case__img`, { origin: 'top' })
-sr.reveal(`.case__data`)
+sr.reveal(`#start h1,.categories__card, .footer__copy`, { origin: 'top', interval: 100 })
+sr.reveal(`.features__data, .teams__data, .testimonial__animate, .features__row`, { origin: 'left', interval: 100 })
+sr.reveal(`.features__img, .testimonial__img`, { origin: 'right' })
+sr.reveal(`.about__img, .teams__text`, { origin: 'top' })
+sr.reveal(`#start button, .home__subtitle, .teams__image-container`, { origin: 'bottom' })
+sr.reveal(`.teams__name, .teams__sub, .button`, { delay: 500, origin: 'bottom', interval: 200 })
+
+
+sr.reveal(`.about__data`)
 
 
 /*** SWITCH ANIMATION ***/
 
-const caseImages = ['about.png'];
-const caseImgElement = document.querySelector('.case__img');
+const aboutImages = ['about.png'];
+const aboutImgElement = document.querySelector('.about__img');
 
 let currentIndex = 0;
 
-function changeCaseImage() {
-    caseImgElement.classList.add('hide');
+function changeaboutImage() {
+    aboutImgElement.classList.add('hide');
     setTimeout(() => {
-        currentIndex = (currentIndex + 1) % caseImages.length;
-        caseImgElement.src = `assets/img/${caseImages[currentIndex]}`;
-        caseImgElement.classList.remove('hide');
+        currentIndex = (currentIndex + 1) % aboutImages.length;
+        aboutImgElement.src = `assets/img/${aboutImages[currentIndex]}`;
+        aboutImgElement.classList.remove('hide');
     }, 2000);
 }
 
-changeCaseImage();
-setInterval(changeCaseImage, 6000);
+changeaboutImage();
+setInterval(changeaboutImage, 6000);
 
 /*** SLIDER ANIMATION AND RANDOM PICTURE ***/
 const testimonialItems = document.querySelectorAll('.testimonial-item');
