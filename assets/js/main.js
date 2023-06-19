@@ -78,17 +78,35 @@ sr.reveal(`.about__data`)
 
 
 /*** SWITCH ANIMATION ***/
+const featuresImages = ['Design.png', 'Design2.png', 'Design3.png'];
+const featuresImgElement = document.querySelector('.features__img');
+
+let currentIndex = 0;
+
+function changeFeatureImage() {
+  featuresImgElement.style.transform = 'translateX(-100%)';
+  setTimeout(() => {
+    currentIndex = (currentIndex + 1) % featuresImages.length;
+    featuresImgElement.src = `assets/img/${featuresImages[currentIndex]}`;
+    featuresImgElement.style.transform = 'translateX(0)';
+  }, 300);
+}
+
+changeFeatureImage();
+setInterval(changeFeatureImage, 5000);
+
+
 
 const aboutImages = ['about.png'];
 const aboutImgElement = document.querySelector('.about__img');
 
-let currentIndex = 0;
+let currentIndex2 = 0;
 
 function changeaboutImage() {
     aboutImgElement.classList.add('hide');
     setTimeout(() => {
-        currentIndex = (currentIndex + 1) % aboutImages.length;
-        aboutImgElement.src = `assets/img/${aboutImages[currentIndex]}`;
+        currentIndex2 = (currentIndex2 + 1) % aboutImages.length;
+        aboutImgElement.src = `assets/img/${aboutImages[currentIndex2]}`;
         aboutImgElement.classList.remove('hide');
     }, 2000);
 }
