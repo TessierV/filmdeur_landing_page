@@ -75,7 +75,7 @@ sr.reveal(`.case__data`)
 
 /*** SWITCH ANIMATION ***/
 
-const caseImages = ['Phone1.png', 'Phone2.png', 'Phone3.png'];
+const caseImages = ['about.png'];
 const caseImgElement = document.querySelector('.case__img');
 
 let currentIndex = 0;
@@ -91,3 +91,37 @@ function changeCaseImage() {
 
 changeCaseImage();
 setInterval(changeCaseImage, 6000);
+
+/*** SLIDER ANIMATION AND RANDOM PICTURE ***/
+const testimonialItems = document.querySelectorAll('.testimonial-item');
+let currentItem = 0;
+
+function showTestimonial(index) {
+    testimonialItems.forEach(item => item.classList.remove('active'));
+    testimonialItems[index].classList.add('active');
+}
+
+function generateRandomAvatarUrl() {
+    const avatarId = Math.floor(Math.random() * 70) + 1; // Génère un nombre aléatoire entre 1 et 70
+    return `https://i.pravatar.cc/150?img=${avatarId}`;
+}
+
+function setupTestimonials() {
+    testimonialItems.forEach(item => {
+        const avatarImg = item.querySelector('.testimonial-avatar');
+        const avatarUrl = generateRandomAvatarUrl();
+        avatarImg.src = avatarUrl;
+    });
+}
+
+function nextTestimonial() {
+    currentItem++;
+    if (currentItem >= testimonialItems.length) {
+        currentItem = 0;
+    }
+    showTestimonial(currentItem);
+}
+
+setInterval(nextTestimonial, 5000); // Change testimonial every 5 seconds
+showTestimonial(currentItem); // Show initial testimonial
+setupTestimonials(); // Set up testimonials with random avatars
