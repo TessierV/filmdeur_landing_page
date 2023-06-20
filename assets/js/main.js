@@ -78,6 +78,7 @@ sr.reveal(`.about__data`)
 
 
 /*** SWITCH ANIMATION ***/
+
 const featuresImages = ['Design.png', 'Design2.png', 'Design3.png'];
 const featuresImgElement = document.querySelector('.features__img');
 
