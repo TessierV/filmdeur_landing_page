@@ -80,7 +80,10 @@
                             "Experience the thrill of Filmdeur, the ultimate movie randomizer. Get ready to be surprised
                             and delighted as Filmdeur matches you with films you never knew you needed to watch. Join us
                             and embark on a cinematic adventure like no other!"
+
                         </p>
+                        <button class="home__button__modal" onclick="openModal()">Watch the trailer</button>
+
                     </div>
                 </div>
             </div>
@@ -88,9 +91,39 @@
 
         <!--=============== CATEGORIES ===============-->
         <section class="categories section" id="categories">
+
             <h2 class="section__title section__title-gradient categories__line">
                 Why use Filmdeur ?
             </h2>
+            <div id="video_modal" class="modal">
+                <div class="categories__modal">
+                    <div class="categories__container">
+                        <video id="modalVideo" controls>
+                            <source src="assets/video/Filmdeur.mp4" type="video/mp4">
+                            Votre navigateur ne prend pas en charge la lecture de vidéos.
+                        </video>
+                    </div>
+                    <span class="close-button" onclick="closeModal()">&times;</span>
+                </div>
+            </div>
+
+            <script>
+                function openModal() {
+                    var modal = document.getElementById("video_modal");
+                    modal.style.display = "block";
+                    var video = document.getElementById("modalVideo");
+                    video.play();
+                }
+
+                function closeModal() {
+                    var modal = document.getElementById("video_modal");
+                    modal.style.display = "none";
+                    var video = document.getElementById("modalVideo");
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            </script>
+
 
             <div class="categories__container container grid">
                 <article class="categories__card">
@@ -137,7 +170,8 @@
                         <img src="assets/img/heart.svg">
                         <div class="features__row-content">
                             <h3 class="features__row-title">Match :</h3>
-                            <p class="features__row-description">"Retrieve your past matches effortlessly and update it."
+                            <p class="features__row-description">"Retrieve your past matches effortlessly and update
+                                it."
                             </p>
                         </div>
                     </div>
@@ -173,26 +207,30 @@
                         <div class="testimonial-item">
                             <img class="testimonial-avatar" src="" alt="Avatar">
                             <h3 class="testimonial-name">Max Smith</h3>
-                            <p class="testimonial-text">"I wanted a website to provide simple and effective information whitout overwhelming we. I'm happy to found it !"
+                            <p class="testimonial-text">"I wanted a website to provide simple and effective information
+                                whitout overwhelming we. I'm happy to found it !"
                             </p>
                         </div>
                         <div class="testimonial-item">
                             <img class="testimonial-avatar" src="" alt="Avatar">
 
                             <h3 class="testimonial-name">Joe Johnson</h3>
-                            <p class="testimonial-text">"Congrats, I was able to customize the colors of the website to my preference ! "</p>
+                            <p class="testimonial-text">"Congrats, I was able to customize the colors of the website to
+                                my preference ! "</p>
                         </div>
                         <div class="testimonial-item">
                             <img class="testimonial-avatar" src="" alt="Avatar">
 
                             <h3 class="testimonial-name">Sam Dawson</h3>
-                            <p class="testimonial-text">"I like the freedom to not be oblige to suscribe for have access of the services ! "</p>
+                            <p class="testimonial-text">"I like the freedom to not be oblige to suscribe for have access
+                                of the services ! "</p>
                         </div>
                         <div class="testimonial-item">
                             <img class="testimonial-avatar" src="" alt="Avatar">
 
                             <h3 class="testimonial-name">Alex Doe</h3>
-                            <p class="testimonial-text">"As a user, I enjoy to be able to seamlessly access the website from any device, wheter it's a desktop or a mobile device.</p>
+                            <p class="testimonial-text">"As a user, I enjoy to be able to seamlessly access the website
+                                from any device, wheter it's a desktop or a mobile device.</p>
                         </div>
                     </div>
                 </div>
@@ -210,9 +248,11 @@
                 </div>
                 <div class="about__data">
                     <h2 class="section__title section__title-gradient">About</h2>
-                    <p class="about__description">"Filmdeur project was born out of a <b>deep passion</b> for cinema and a
+                    <p class="about__description">"Filmdeur project was born out of a <b>deep passion</b> for cinema and
+                        a
                         strong desire to share this passion with fellow movie enthusiasts. Every film has the power to
-                        transport, inspire, and entertain. <b>Filmdeur is a place where you can discover films randomly</b> and
+                        transport, inspire, and entertain. <b>Filmdeur is a place where you can discover films
+                            randomly</b> and
                         be pleasantly surprised by new cinematic experiences.
                         <br>Join us on this cinematic adventure and discover new masterpieces, relive your favorite
                         classics, and immerse yourself in the fascinating world of cinema with us."
