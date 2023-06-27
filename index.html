@@ -36,20 +36,15 @@
                     </li>
                 </ul>
 
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
             </div>
 
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="ri-function-line"></i>
-            </div>
         </nav>
     </header>
 
     <main class="main">
         <section id="start">
-            <h1>Filmdeur<br><button>The place Where Movies Match!</button>
+            <h1>Filmdeur<br>
+                <button>The place Where Movies Match!</button>
             </h1>
         </section>
         <!--=============== MARQUEE ===============-->
@@ -80,10 +75,8 @@
                             "Experience the thrill of Filmdeur, the ultimate movie randomizer. Get ready to be surprised
                             and delighted as Filmdeur matches you with films you never knew you needed to watch. Join us
                             and embark on a cinematic adventure like no other!"
-
                         </p>
                         <button class="home__button__modal" onclick="openModal()">Watch the trailer</button>
-
                     </div>
                 </div>
             </div>
@@ -106,25 +99,6 @@
                     <span class="close-button" onclick="closeModal()">&times;</span>
                 </div>
             </div>
-
-            <script>
-                function openModal() {
-                    var modal = document.getElementById("video_modal");
-                    modal.style.display = "block";
-                    var video = document.getElementById("modalVideo");
-                    video.play();
-                }
-
-                function closeModal() {
-                    var modal = document.getElementById("video_modal");
-                    modal.style.display = "none";
-                    var video = document.getElementById("modalVideo");
-                    video.pause();
-                    video.currentTime = 0;
-                }
-            </script>
-
-
             <div class="categories__container container grid">
                 <article class="categories__card">
                     <div class="categories__content">

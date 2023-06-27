@@ -1,27 +1,3 @@
-/*** SHOW MENU ***/
-const navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close')
-if (navToggle) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu')
-    })
-}
-if (navClose) {
-    navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu')
-    })
-}
-
-/*** REMOVE MENU MOBILE ***/
-const navLink = document.querySelectorAll('.nav__link')
-
-function linkAction() {
-    const navMenu = document.getElementById('nav-menu')
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
-
 /*** CHANGE BACKGROUND HEADER ***/
 function scrollHeader() {
     const header = document.getElementById('header')
@@ -36,25 +12,21 @@ function scrollUp() {
 }
 window.addEventListener('scroll', scrollUp)
 
-/*** SCROLL SECTIONS ACTIVE LINK ***/
-const sections = document.querySelectorAll('section[id]')
-
-function scrollActive() {
-    const scrollY = window.pageYOffset
-
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-        }
-    })
+/*** CLOSE MODAL ***/
+function openModal() {
+    var modal = document.getElementById("video_modal");
+    modal.style.display = "block";
+    var video = document.getElementById("modalVideo");
+    video.play();
 }
-window.addEventListener('scroll', scrollActive)
+
+function closeModal() {
+    var modal = document.getElementById("video_modal");
+    modal.style.display = "none";
+    var video = document.getElementById("modalVideo");
+    video.pause();
+    video.currentTime = 0;
+}
 
 /*** SCROLLER ANIMATION ***/
 const sr = ScrollReveal({
@@ -145,6 +117,6 @@ function nextTestimonial() {
     showTestimonial(currentItem);
 }
 
-setInterval(nextTestimonial, 5000); // Change testimonial every 5 seconds
-showTestimonial(currentItem); // Show initial testimonial
-setupTestimonials(); // Set up testimonials with random avatars
+setInterval(nextTestimonial, 5000);
+showTestimonial(currentItem);
+setupTestimonials();
