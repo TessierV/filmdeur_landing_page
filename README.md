@@ -44,10 +44,10 @@ Filmdeur is a unique movie exploration platform designed to ignite your cinemati
     <summary>
         <b>See more</b>
     </summary>
-▪ script.js: Contains all the website script from JS<br>   
-▪ style.css : Contains all the CSS<br>   
-▪ index.html : Contains all the html from the landing page<br>   
-▪ img/ : Directory contains all the picture require<br>   
+    ▪ script.js : Contains all the website script from JS<br>   
+    ▪ style.css : Contains all the CSS<br>   
+    ▪ index.html : Contains all the html from the landing page<br>   
+    ▪ img/ : Directory contains all the picture require<br>      
 </details>
 
 ## Attributions
@@ -56,7 +56,7 @@ Filmdeur is a unique movie exploration platform designed to ignite your cinemati
 * Image Canva and storyset  
 * SVG Backgrounds  
 
-## Authors
+## Authors  
 <h3>Vanessa TESSIER :
     <a href="https://www.linkedin.com/in/vanessa-tessier-601794252/">
         <img alt="Anurag Hazra | CodeSandbox" height="20px" src="https://img.shields.io/badge/TessierVanessa-4A6552?style=for-the-badge&logo=linkedin&color=f64790&logoColor=white"/>
